@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="/Images/logoBlack.png">
+  <!-- My Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- Bootstrap Stylesheet -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- Bootstrap -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Heebo:300|Quicksand" rel="stylesheet">
+  <!-- Animsition.css -->
+  <link rel="stylesheet" href="css/animsition.css">
+  <!-- Meta -->
+  <meta name="author" content="Rhys Baker">
+  <!-- Charset -->
+  <meta charset="utf-8">
+  <!-- animsition.js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js" charset="UTF-8"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- javascript.js -->
+  <script src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/instafeed.min.js"></script>
+  <script src="js/animsition.js"></script>
+  <script src="js/javascript.js"></script>
+  <script src="js/smooth-scroll.js"></script>
+  <!-- Title -->
+  <title>Rhys Baker</title>
+</head>
+
+<body onload="clock()">
+
+
+  <div class="animsition">
+
+    <!-- Navbar -->
+    <div id="navBar">
+      <ul class="navLinks">
+        <a data-scroll href="#" class="userNavLinksActive">Home</a>
+        <a data-scroll href="#projects" class="userNavLinks">Projects</a>
+        <a data-scroll href="#education" class="userNavLinks">Education</a>
+        <a data-scroll href="#contact" class="userNavLinks">Contact</a>
+        <a data-scroll href="#personal" class="userNavLinks">Personal Life</a>
+        <div class="clock"></div>
+      </ul>
+    </div>
+
+
+    <div class="section row" id="projects">
+      <h1 class="boldText">Projects</h1>
+      <div id="proj">
+
+        <div class="col-xs-4">
+          <p>Fireworks</p>
+          <img src="/Images/Fireworks.jpg" style="width: 75%; height:auto;">
+        </div>
+
+        <div class="col-xs-4">
+          <p>1984</p>
+          <img src="/Images/1984.jpg" style="width: 75%; height:auto;">
+        </div>
+
+        <div class="col-xs-4">
+          <p>WWW</p>
+          <img src="/Images/WWW.jpg" style="width: 75%; height:auto;">
+        </div>
+
+      </div>
+    </div>
+
+    <div class="section">
+      <div id="education" class="container" style="margin: 8% 0% 8% 0%;">
+        <h2 class="container col-xs-6 col-xs-offset-1">
+                    <span style="color: #4d74b3;" class="boldText">Internet Design</span> student, currently studying Internet Design at Plymouth University. Graduated Computing Level 3 at City College Plymouth.
+                </h2>
+      </div>
+    </div>
+
+
+
+
+    <section id="contact">
+      <div class="container">
+        <hr>
+        <hr>
+        <h2 class="text-center pt-5 boldText">Contact Me</h2>
+        <hr>
+        <hr>
+
+        <form accept-charset="UTF-8" action="https://formkeep.com/f/cbfb1ed06a6a" method="POST">
+          <div class="form-group">
+            <input name="name" class="form-control" id="name" type="text" placeholder="Name" required="required">
+          </div>
+
+          <div class="form-group">
+            <input name="email" class="form-control" id="email" type="email" placeholder="Email Address" required="required">
+          </div>
+
+          <div class="form-group">
+            <textarea name="message" class="form-control" id="message" rows="5" placeholder="Message" required="required"></textarea>
+          </div>
+
+          <div class="form-group">
+            <button class="form-control btn-primay" type="submit">Send</button>
+          </div>
+
+        </form>
+      </div>
+      <hr>
+    </section>
+
+
+    <section id="personal" class="row" style="width: 100%; padding: 5px;">
+      <div class="container">
+      <h1 class="boldText" style="text-align: center; padding-bottom: 3%;">Personal Life</h1>
+        <div id="instafeed"></div>
+      </div>
+    </section>
+
+
+
+    <footer>
+      <p>Rhys Baker 2018</p>
+    </footer>
+
+  </div>
+
+  <script>
+    $(function() {
+      $('body').removeClass('fade-out');
+    });
+  </script>
+
+  <script>
+    $(document).ready(function() {
+      $(".animsition").animsition({
+        inClass: 'fade-in',
+        outClass: 'fade-out',
+        inDuration: 2000,
+        outDuration: 800,
+        linkElement: '.animsition-link',
+        loading: true,
+        loadingParentElement: 'body', //animsition wrapper element
+        loadingClass: 'animsition-loading',
+        loadingInner: '', // e.g '<img src="loading.svg" />'
+        timeout: false,
+        timeoutCountdown: 5000,
+        onLoadEvent: true,
+        browser: ['animation-duration', '-webkit-animation-duration'],
+        overlay: false,
+        overlayClass: 'animsition-overlay-slide',
+        overlayParentElement: 'body',
+        transition: function(url) {
+          window.location.href = url;
+        }
+      });
+    });
+  </script>
+
+  <script>
+    smoothScroll.init({
+      speed: 1200, // Integer. How fast to complete the scroll in milliseconds
+      easing: 'easeInOutCubic', // Easing pattern to use
+    });
+  </script>
+
+</body>
+
+</html>
+
+<!-- Rhys Baker (2018) -->
